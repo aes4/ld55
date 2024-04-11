@@ -34,6 +34,7 @@
   },
   "name":"ld55",
   "resources":[
+    {"id":{"name":"oplayer","path":"objects/oplayer/oplayer.yy",},},
     {"id":{"name":"mm","path":"rooms/mm/mm.yy",},},
   ],
   "resourceType":"GMProject",
