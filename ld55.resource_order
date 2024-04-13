@@ -16,5 +16,12 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
-  "ResourceOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"ogame","order":5,"path":"objects/ogame/ogame.yy",},
+    {"name":"opersistent","order":6,"path":"objects/opersistent/opersistent.yy",},
+    {"name":"opzdw","order":2,"path":"objects/opzdw/opzdw.yy",},
+    {"name":"otempseldec","order":4,"path":"objects/otempseldec/otempseldec.yy",},
+    {"name":"otempselinc","order":3,"path":"objects/otempselinc/otempselinc.yy",},
+    {"name":"enableaudio","order":1,"path":"rooms/enableaudio/enableaudio.yy",},
+  ],
 }
