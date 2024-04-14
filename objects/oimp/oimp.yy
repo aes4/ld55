@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"odoortop",
+  "%Name":"oimp",
   "eventList":[],
   "managed":true,
-  "name":"odoortop",
+  "name":"oimp",
   "overriddenProperties":[],
   "parent":{
-    "name":"walls",
-    "path":"folders/Objects/walls.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sdoor",
-    "path":"sprites/sdoor/sdoor.yy",
+    "name":"simpidle",
+    "path":"sprites/simpidle/simpidle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

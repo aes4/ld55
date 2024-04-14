@@ -14,7 +14,10 @@ walked = false  // not implemented yet
 bosshealth = 10000
 bossxx = 100  // we only need to update this before the boss gets delete when leaving the room he is in
 bossyy = 100
-odoortopc = false
+
+odooruc = false
+odoordc = false
+global.create = []
 
 
 function searchroombyxy(xx, yy) {

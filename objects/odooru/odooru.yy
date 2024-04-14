@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oboss",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"odooru",
+  "eventList":[],
   "managed":true,
-  "name":"oboss",
+  "name":"odooru",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"walls",
+    "path":"folders/Objects/walls.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sboss",
-    "path":"sprites/sboss/sboss.yy",
+    "name":"sdooru",
+    "path":"sprites/sdooru/sdooru.yy",
   },
   "spriteMaskId":null,
   "visible":true,
