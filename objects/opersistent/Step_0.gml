@@ -17,9 +17,17 @@ if gamestart {
 		// save current state of room, increase boss health to discourage long travels?
 		bosshealth += 10
 		currentroom = searchroombyxy(loc.xx, loc.yy)
-		if currentroom.r.boss {
-			bossxx = oboss.x
-			bossyy = oboss.y
+		if currentroom.r.boss {  // if instance exists cause boss can leave the room and delete itself
+			if instance_exists(oboss) {
+				bossxx = oboss.x
+				bossyy = oboss.y
+			}
+		}
+		ti = instance_number(oimp);
+		for (var i = 0; i < ti; i++) {
+			inst = instance_find(oimp, i)
+			currentroom.r.imps[i].xx = inst.x
+			currentroom.r.imps[i].yy = inst.y
 		}
 		// now in a different "room"
 		loc.yy += 1
@@ -32,7 +40,7 @@ if gamestart {
 				yy: loc.yy,
 				type: rdefault,  // this will eventually be like random.choice in python except the room can have a 0 -> 1 % chance of appearing
 				boss: 0,  // boss will probably modifiy these values as he moves between rooms or maybe something more advanced
-				imps: 0  // this might also be a bit confusing I will come with strategy later
+				imps: []  // this might also be a bit confusing I will come with strategy later
 			}
 			array_push(rooms, newroomdata)
 			room_goto(newroomdata.type)
@@ -42,7 +50,10 @@ if gamestart {
 			if currentroom.r.boss {
 				array_push(global.create, { lx: bossxx, ly: bossyy, lo: oboss })
 			}
-			// we will do the same once enemies get added
+			// we will do the same once enemies get added update: enemies added
+			for (i = 0; i < array_length(currentroom.r.imps); i++ ) {
+				array_push(global.create, {lx: currentroom.r.imps[i].xx, ly: currentroom.r.imps[i].yy, lo: oimp})
+			}
 		}
 		odooruc = false
     }
@@ -51,8 +62,16 @@ if gamestart {
 		bosshealth += 10
 		currentroom = searchroombyxy(loc.xx, loc.yy)
 		if currentroom.r.boss {
-			bossxx = oboss.x
-			bossyy = oboss.y
+			if instance_exists(oboss) {
+				bossxx = oboss.x
+				bossyy = oboss.y
+			}
+		}
+		ti = instance_number(oimp);
+		for (var i = 0; i < ti; i++) {
+			inst = instance_find(oimp, i)
+			currentroom.r.imps[i].xx = inst.x
+			currentroom.r.imps[i].yy = inst.y
 		}
 		// now in a different "room"
 		loc.yy -= 1
@@ -65,7 +84,7 @@ if gamestart {
 				yy: loc.yy,
 				type: rdefault,  // this will eventually be like random.choice in python except the room can have a 0 -> 1 % chance of appearing
 				boss: 0,  // boss will probably modifiy these values as he moves between rooms or maybe something more advanced
-				imps: 0  // this might also be a bit confusing I will come with strategy later
+				imps: []  // this might also be a bit confusing I will come with strategy later
 			}
 			array_push(rooms, newroomdata)
 			room_goto(newroomdata.type)
@@ -75,7 +94,10 @@ if gamestart {
 			if currentroom.r.boss {
 				array_push(global.create, { lx: bossxx, ly: bossyy, lo: oboss })
 			}
-			// we will do the same once enemies get added
+			// we will do the same once enemies get added update: enemies added
+			for (i = 0; i < array_length(currentroom.r.imps); i++ ) {
+				array_push(global.create, {lx: currentroom.r.imps[i].xx, ly: currentroom.r.imps[i].yy, lo: oimp})
+			}
 		}
 		odoordc = false
 	}

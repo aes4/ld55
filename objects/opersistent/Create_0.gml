@@ -1,11 +1,11 @@
 loc = {  xx: 0, yy: 0 }  // camera location
 
-r = {
+r = {  // next time rooms should be a global
 	xx: 0,
 	yy: 0,
 	type: rstart,
 	boss: false,  // is the boss in the room
-	imps: 0
+	imps: []  // remember this mistake the perfect tracking is as simple as [{xx: yy:}] this keeps the amount and the position
 }
 rooms = [r]
 gamestart = false
@@ -18,6 +18,7 @@ bossyy = 100
 odooruc = false
 odoordc = false
 global.create = []
+global.rcreate = []
 
 
 function searchroombyxy(xx, yy) {

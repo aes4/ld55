@@ -5,8 +5,8 @@
     {"name":"Fonts","order":6,"path":"folders/Fonts.yy",},
     {"name":"Notes","order":11,"path":"folders/Notes.yy",},
     {"name":"Objects","order":14,"path":"folders/Objects.yy",},
-    {"name":"walls","order":11,"path":"folders/Objects/walls.yy",},
     {"name":"mo","order":8,"path":"folders/Objects/mo.yy",},
+    {"name":"walls","order":11,"path":"folders/Objects/walls.yy",},
     {"name":"Particle Systems","order":13,"path":"folders/Particle Systems.yy",},
     {"name":"Paths","order":3,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":8,"path":"folders/Rooms.yy",},
@@ -20,7 +20,7 @@
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
-    {"name":"ocreater","order":13,"path":"objects/ocreater/ocreater.yy",},
+    {"name":"ocreate","order":13,"path":"objects/ocreate/ocreate.yy",},
     {"name":"oboss","order":10,"path":"objects/oboss/oboss.yy",},
     {"name":"odoord","order":3,"path":"objects/odoord/odoord.yy",},
     {"name":"odooru","order":2,"path":"objects/odooru/odooru.yy",},

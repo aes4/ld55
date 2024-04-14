@@ -27,7 +27,12 @@ if instance_exists(odoord) {
 if instance_exists(odooru) {
     if !place_meeting(x, y, odooru) && !place_meeting(x, y, odoord) && !place_meeting(x, y, owall1) {
     	if (mouse_check_button_pressed(mb_left) || mouse_check_button_pressed(mb_right)) {
-    		instance_create_layer(x, y, layer, oimp)
+    		//instance_create_layer(x, y, layer, oimp)  // ocreater
+			currentroom = searchroombyxy(opersistent.loc.xx, opersistent.loc.yy)
+			array_push(currentroom.r.imps, { xx: omouse.x, yy: omouse.y })
+			opersistent.rooms[currentroom.i] = currentroom.r
+			global.rcreate = [{ lo: oimp }]
+			//show_debug_message(string(opersistent.rooms))
     	}
     }
 }

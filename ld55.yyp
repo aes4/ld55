@@ -15,8 +15,8 @@
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"walls","folderPath":"folders/Objects/walls.yy","name":"walls","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"mo","folderPath":"folders/Objects/mo.yy","name":"mo","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"walls","folderPath":"folders/Objects/walls.yy","name":"walls","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -38,7 +38,7 @@
   },
   "name":"ld55",
   "resources":[
-    {"id":{"name":"ocreater","path":"objects/ocreater/ocreater.yy",},},
+    {"id":{"name":"ocreate","path":"objects/ocreate/ocreate.yy",},},
     {"id":{"name":"oboss","path":"objects/oboss/oboss.yy",},},
     {"id":{"name":"obstart","path":"objects/obstart/obstart.yy",},},
     {"id":{"name":"odoord","path":"objects/odoord/odoord.yy",},},

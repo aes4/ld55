@@ -19,3 +19,17 @@ if dir == "r" {
 		x += vel
 	}
 }
+if center {
+	speed = 0
+	if !(room_width/2 - 4 < x && x < room_width/2 + 4 && room_height/2 + 4 > y && y > room_height/2 - 4) {
+		move_towards_point(room_width/2, room_height/2, 2)
+	} else {
+		stall -= 1
+		if stall == 0 {
+			center = false
+		}
+	}
+} else {
+	// pick random dir
+	y += vel
+}
