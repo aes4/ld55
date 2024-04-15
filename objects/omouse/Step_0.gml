@@ -15,10 +15,8 @@ if keyboard_check_released(ord("E")) {
 			}
 		}
 		show_debug_message(string(dirs))
-		show_debug_message("rightup"+string(Direction.RightUp)+"rightdown"+string(Direction.RightDown)+"leftup"+string(Direction.LeftUp)+"Leftdown"+string(Direction.LeftDown))
-		if array_length(dirs) > 3 {
-			if dirs[0] == "rightup" && dirs[1] == "rightdown" && dirs[2] == "leftdown" && dirs[3] == "rightdown" {
-				show_debug_message("UATSHOENHTU")
+		if array_length(dirs) > 0 {
+			if dirs[0] == "rightup" && dirs[1] == "rightdown" { //&& dirs[2] == "leftdown" { // && dirs[3] == "rightdown" {
 				ni = instance_nearest(x, y, odem)
 				if (instance_exists(ni) && point_distance(x, y, ni.x, ni.y) < 128) {
 				} else {

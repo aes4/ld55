@@ -23,6 +23,7 @@
   "ResourceOrderSettings":[
     {"name":"oarea","order":12,"path":"objects/oarea/oarea.yy",},
     {"name":"obars","order":10,"path":"objects/obars/obars.yy",},
+    {"name":"otitle","order":5,"path":"objects/otitle/otitle.yy",},
     {"name":"oboss","order":3,"path":"objects/oboss/oboss.yy",},
     {"name":"obquit","order":1,"path":"objects/obquit/obquit.yy",},
     {"name":"ocreate","order":6,"path":"objects/ocreate/ocreate.yy",},
@@ -83,8 +84,8 @@
     {"name":"simpwalkright","order":25,"path":"sprites/simpwalkright/simpwalkright.yy",},
     {"name":"sincvol","order":5,"path":"sprites/sincvol/sincvol.yy",},
     {"name":"smanaball","order":30,"path":"sprites/smanaball/smanaball.yy",},
-    {"name":"smmbgb","order":42,"path":"sprites/smmbgb/smmbgb.yy",},
     {"name":"smmbg","order":43,"path":"sprites/smmbg/smmbg.yy",},
+    {"name":"smmbgb","order":42,"path":"sprites/smmbgb/smmbgb.yy",},
     {"name":"smouse","order":11,"path":"sprites/smouse/smouse.yy",},
     {"name":"Sprite4_1","order":8,"path":"sprites/Sprite4_1/Sprite4_1.yy",},
     {"name":"Sprite4_2","order":9,"path":"sprites/Sprite4_2/Sprite4_2.yy",},
@@ -93,5 +94,6 @@
     {"name":"Sprite6","order":6,"path":"sprites/Sprite6/Sprite6.yy",},
     {"name":"squit","order":1,"path":"sprites/squit/squit.yy",},
     {"name":"sspawn","order":2,"path":"sprites/sspawn/sspawn.yy",},
+    {"name":"stitle","order":44,"path":"sprites/stitle/stitle.yy",},
   ],
 }

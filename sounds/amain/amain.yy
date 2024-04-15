@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":30.040792,
+  "duration":147.27834,
   "name":"amain",
   "parent":{
     "name":"Sounds",
