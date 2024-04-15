@@ -13,7 +13,7 @@ rooms = [r]
 gamestart = false
 firstroom = false
 walked = false  // not implemented yet
-bosshealthcap = 1000
+bosshealthcap = 1400
 bosshealth = bosshealthcap
 bossxx = 100  // we only need to update this before the boss gets delete when leaving the room he is in
 bossyy = 100
@@ -25,6 +25,7 @@ global.rcreate = []
 global.mana = 100
 global.rcm = false
 manacounter = 0
+vol = 0.8
 
 
 function searchroombyxy(xx, yy) {

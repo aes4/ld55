@@ -116,6 +116,23 @@ if !scroll {
 		}
 	}
 }
+if instance_exists(obquit) {
+    if (place_meeting(x, y, obquit)) {
+    	if (mouse_check_button(mb_left) ||  mouse_check_button(mb_right)) {
+    	    game_end()
+        }
+    }
+}
+if (place_meeting(x, y, oincvol)) {
+	if (mouse_button == mb_left || mouse_button == mb_right) {
+		opersistent.vol += 0.1
+	}
+}
+if (place_meeting(x, y, odecvol)) {
+	if (mouse_button == mb_left || mouse_button == mb_right) {
+		if opersistent.vol > 0 opersistent.vol -= 0.1
+	}
+}
 /*
 imp click
 [ { xx : 0, yy : 0, type : ref room 2, imps : [ { xx : 336, yy : 259 } ], boss : 1 } ]
@@ -128,3 +145,4 @@ boss transfer
 click it seem to have been inserted in the wrong spot not insert it was created twice
 [,{ xx : 0, yy : -1, , imps : [ { xx : 589, yy : 355 } ], boss : 0 },{ xx : 0, yy : -1, , imps : [  ], boss : 1 } ]
 */
+if opersistent.vol < 0 opersistent.vol = 0
