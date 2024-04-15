@@ -15,7 +15,7 @@ if keyboard_check_released(ord("E")) {
 			}
 		}
 		show_debug_message(string(dirs))
-		if array_length(dirs) > 0 {
+		if array_length(dirs) > 1 {
 			if dirs[0] == "rightup" && dirs[1] == "rightdown" { //&& dirs[2] == "leftdown" { // && dirs[3] == "rightdown" {
 				ni = instance_nearest(x, y, odem)
 				if (instance_exists(ni) && point_distance(x, y, ni.x, ni.y) < 128) {

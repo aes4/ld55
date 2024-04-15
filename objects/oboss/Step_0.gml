@@ -44,6 +44,9 @@ if dead {
 if opersistent.bosshealth < 0 && !dead{
 	sprite_index = sbossdead
 	audio_play_sound(adeath, 5, false, opersistent.vol)
+	instance_create_layer(x, y - 20, "Instances", owin)
+	audio_play_sound(awin, 5, false, opersistent.vol)
+	audio_stop_sound(opersistent.tr)
 	dead = true
 }
 // transfer

@@ -15,7 +15,7 @@ if trt {
 }
 
 if gamestart {
-	if manacounter < 200 {
+	if manacounter < 175 {
 		manacounter += 1
 	} else {
 		global.rcm = true
