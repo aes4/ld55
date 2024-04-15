@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"simpidle",
-    "path":"sprites/simpidle/simpidle.yy",
+    "name":"simpwalkright",
+    "path":"sprites/simpwalkright/simpwalkright.yy",
   },
   "spriteMaskId":null,
   "visible":true,

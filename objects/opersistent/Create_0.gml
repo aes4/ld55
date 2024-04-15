@@ -1,3 +1,5 @@
+// first object in the game along side omouse, used to initilize cause I'm bad and I should have planned this out better
+
 loc = {  xx: 0, yy: 0 }  // camera location
 
 r = {  // next time rooms should be a global
@@ -11,7 +13,8 @@ rooms = [r]
 gamestart = false
 firstroom = false
 walked = false  // not implemented yet
-bosshealth = 10000
+bosshealthcap = 1000
+bosshealth = bosshealthcap
 bossxx = 100  // we only need to update this before the boss gets delete when leaving the room he is in
 bossyy = 100
 
@@ -19,6 +22,9 @@ odooruc = false
 odoordc = false
 global.create = []
 global.rcreate = []
+global.mana = 100
+global.rcm = false
+manacounter = 0
 
 
 function searchroombyxy(xx, yy) {

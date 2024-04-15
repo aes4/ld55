@@ -8,8 +8,8 @@
   "name":"oplayer",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ignore",
+    "path":"folders/Objects/ignore.yy",
   },
   "parentObjectId":null,
   "persistent":false,

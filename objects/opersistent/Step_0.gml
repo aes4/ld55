@@ -12,6 +12,12 @@ if room_get_name(room) == "rstart" && !gamestart {
 
 
 if gamestart {
+	if manacounter < 100 {
+		manacounter += 1
+	} else {
+		global.rcm = true
+		manacounter = 0
+	}
 	// game started
     if odooruc {  // <-- there was a way to not need to do this but because I forgot already I'm working on other stuff if it works don't fix it
 		// save current state of room, increase boss health to discourage long travels?
@@ -67,7 +73,7 @@ if gamestart {
 				bossyy = oboss.y
 			}
 		}
-		ti = instance_number(oimp);
+		ti = instance_number(oimp)
 		for (var i = 0; i < ti; i++) {
 			inst = instance_find(oimp, i)
 			currentroom.r.imps[i].xx = inst.x
@@ -77,6 +83,7 @@ if gamestart {
 		loc.yy -= 1
 		// we have to check if we have been in this room before with rooms array if not gen room
 		currentroom = searchroombyxy(loc.xx, loc.yy)
+		show_debug_message(currentroom)
 		if currentroom == "roomnotfound" {
 			// gen room values/store them
 			newroomdata = {
@@ -91,7 +98,7 @@ if gamestart {
 		} else {  // we have been in this room before and have to spawn stuff based on currentroom values
 			// if there is a boss spawn it at it's location
 			room_goto(currentroom.r.type)
-			if currentroom.r.boss {
+			if currentroom.r.boss { // isn't createed
 				array_push(global.create, { lx: bossxx, ly: bossyy, lo: oboss })
 			}
 			// we will do the same once enemies get added update: enemies added
