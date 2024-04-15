@@ -8,6 +8,7 @@ if instance_exists(oboss) && !oboss.dead {
 		hp -= 1
 		if hp == 0 {
 			dead = true
+			audio_play_sound(aenemydeath, 3, false, opersistent.vol)
 			//instance_destroy(self)
 		}
 		speed = 0

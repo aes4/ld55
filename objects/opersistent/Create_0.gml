@@ -13,7 +13,7 @@ rooms = [r]
 gamestart = false
 firstroom = false
 walked = false  // not implemented yet
-bosshealthcap = 1400
+bosshealthcap = 1200
 bosshealth = bosshealthcap
 bossxx = 100  // we only need to update this before the boss gets delete when leaving the room he is in
 bossyy = 100
@@ -40,3 +40,6 @@ function searchroombyxy(xx, yy) {
 		return "roomnotfound"
 	}
 }
+randomize()
+tr = false
+trt = true

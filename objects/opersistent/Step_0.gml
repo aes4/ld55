@@ -9,10 +9,13 @@ if room_get_name(room) == "rstart" && !gamestart {
 	rooms[updateroom.i] = updateroom.r
 }
 
-
+if trt {
+	tr = audio_play_sound(amain, 0, true, opersistent.vol)
+    trt = false
+}
 
 if gamestart {
-	if manacounter < 100 {
+	if manacounter < 200 {
 		manacounter += 1
 	} else {
 		global.rcm = true

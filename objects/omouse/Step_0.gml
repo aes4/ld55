@@ -22,8 +22,9 @@ if keyboard_check_released(ord("E")) {
 				ni = instance_nearest(x, y, odem)
 				if (instance_exists(ni) && point_distance(x, y, ni.x, ni.y) < 128) {
 				} else {
-					if global.mana > 10 {
+					if global.mana > 0 {
 						global.mana -= 10
+						audio_play_sound(asummon, 3, false, opersistent.vol)
 						//instance_create_layer(x, y, layer, oimp)  // ocreater
 						currentroom = searchroombyxy(opersistent.loc.xx, opersistent.loc.yy)
 						array_push(currentroom.r.imps, { xx: omouse.x, yy: omouse.y })
@@ -97,12 +98,12 @@ if !scroll {
 		}
 	}
 	if instance_exists(odooru) {  // check if we are in a level
-		if !place_meeting(x, y, odooru) && !place_meeting(x, y, odoord) && !place_meeting(x, y, owall1) {  // make sure we can't place a imp in a wall or door
+		if !place_meeting(x, y, odooru) && !place_meeting(x, y, odoord) && !place_meeting(x, y, owall1) && !place_meeting(x, y, omanaball) {  // make sure we can't place a imp in a wall or door
 		    if (mouse_check_button_pressed(mb_left) || mouse_check_button_pressed(mb_right)) {
 				ni = instance_nearest(x, y, oimp)
 				if (instance_exists(ni) && point_distance(x, y, ni.x, ni.y) < 128) {
 				} else {
-					if global.mana > 10 {
+					if global.mana > 0 {
 						global.mana -= 10
 				    	//instance_create_layer(x, y, layer, oimp)  // ocreater
 						currentroom = searchroombyxy(opersistent.loc.xx, opersistent.loc.yy)
@@ -116,6 +117,7 @@ if !scroll {
 		}
 	}
 }
+// summon 2 = correct spawn
 if instance_exists(obquit) {
     if (place_meeting(x, y, obquit)) {
     	if (mouse_check_button(mb_left) ||  mouse_check_button(mb_right)) {
@@ -123,14 +125,27 @@ if instance_exists(obquit) {
         }
     }
 }
+if (place_meeting(x, y, oenableaudio)) {
+    if (mouse_check_button(mb_left) ||  mouse_check_button(mb_right)) {
+    	opersistent.vol += 0.1
+    }
+}
 if (place_meeting(x, y, oincvol)) {
 	if (mouse_button == mb_left || mouse_button == mb_right) {
 		opersistent.vol += 0.1
+	}
+	if mouse_check_button_released(mb_left) || mouse_check_button_released(mb_right) {
+		audio_stop_sound(opersistent.tr)
+		opersistent.trt = true
 	}
 }
 if (place_meeting(x, y, odecvol)) {
 	if (mouse_button == mb_left || mouse_button == mb_right) {
 		if opersistent.vol > 0 opersistent.vol -= 0.1
+	}
+	if mouse_check_button_released(mb_left) || mouse_check_button_released(mb_right) {
+		audio_stop_sound(opersistent.tr)
+		opersistent.trt = true
 	}
 }
 /*

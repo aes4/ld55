@@ -43,6 +43,7 @@ if dead {
 }
 if opersistent.bosshealth < 0 && !dead{
 	sprite_index = sbossdead
+	audio_play_sound(adeath, 5, false, opersistent.vol)
 	dead = true
 }
 // transfer
